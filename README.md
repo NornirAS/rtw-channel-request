@@ -6,7 +6,7 @@ Create a channel that will be open if there will be incoming data or until timeo
 
 ## How to use
 ```
-const RtwChannel = require('@norniras/rtw-channel-request')
+const RtwChannel = require('@norniras/rtw-channel-request');
 /**
   This has to be on place. Normally it's a bad practice, but you
   will be fine until you make requests against .cioty.com. It will be
@@ -20,15 +20,15 @@ const data = {
   token: 'yourToken',
   objectID: 'number',
   format: 'json' // xml or json
-}
+};
 
 const channel = new RtwChannel(data);
 const getDataStream = async () => {
   const { body } = await channel.request();
   body.on('data', data => {
     console.log(data.toString().trim());
-  })
+  });
 };
  
-getDataStream()
+getDataStream();
 ```
