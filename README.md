@@ -2,11 +2,11 @@
 Create a channel that will be open if there will be incoming data or until timeout. The first message will be a WebJS related to the service you connect to. WebJS can be a whole HTML page including JS or a small widget that you can inject into some part of your app. After you get a WebJS you will start to receive data that you can inject inside the received WebJS.
 
 ## Installation
-`npm i @norniras/rtw-channel-equest --save`
+`npm i @norniras/rtw-channel-request --save`
 
 ## How to use
 ```
-const RtwChannel = require('@norniras/rtw-channel-equest')
+const RtwChannel = require('@norniras/rtw-channel-request')
 
 const data = {
   domain: 'domainName',
@@ -18,10 +18,10 @@ const data = {
 
 const channel = new RtwChannel(data);
 const getDataStream = async () => {
- const { body } = await channel.request();
- body.on('data', data => {
-   console.log(data.toString().trim());
- })
+  const { body } = await channel.request();
+  body.on('data', data => {
+    console.log(data.toString().trim());
+  })
 };
  
 getDataStream()
