@@ -7,6 +7,12 @@ Create a channel that will be open if there will be incoming data or until timeo
 ## How to use
 ```
 const RtwChannel = require('@norniras/rtw-channel-request')
+/**
+  This has to be on place. Normally it's a bad practice, but you
+  will be fine until you make requests against .cioty.com. It will be
+  removed in the near future.
+*/
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0"; 
 
 const data = {
   domain: 'domainName',

@@ -1,11 +1,11 @@
 {
   "name": "@norniras/rtw-channel-request",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Create channel to listen incomming data.",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "NODE_TLS_REJECT_UNAUTHORIZED=0 node ./index.js",
+    "start": "node ./index.js",
     "dev": "NODE_TLS_REJECT_UNAUTHORIZED=0 nodemon index.js"
   },
   "author": "Jevgeni Glazunov",
